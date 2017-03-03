@@ -5,6 +5,7 @@
  */
 package com.lynn.action;
 
+import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +18,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Test {
     
-    @RequestMapping(value = "/test.do")
+    @RequestMapping(value = "/test")
     @ResponseBody
-    @ApiOperation(notes = "test", value = "test")
+    @ApiOperation(value = "test", httpMethod = "GET", notes = "test")
     public String test(){
         return "1";
     }
